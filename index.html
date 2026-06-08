@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarek System</title>
+    <link href="css/select2.min.css" rel="stylesheet" />
+    <link href="css/Page.Css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/Login.css">
+</head>
+
+<body>
+
+    <!-- SECTION FOR THE LOGIN PAGE -->
+    <div id="login-section">
+        <div class="card">
+            <input value="" class="blind-check" type="checkbox" id="blind-input" name="blindcheck" hidden="" />
+
+            <label for="blind-input" class="blind_input">
+                <span class="hide">Hide</span>
+                <span class="show">Show</span>
+            </label>
+
+            <div class="form">
+                <div class="title">Sign In</div>
+
+                <label class="label_input" for="Username">User</label>
+                <input spellcheck="false" class="input" type="user" name="user" id="Username" />
+
+                <label class="label_input" for="password-input">Password</label>
+                <input spellcheck="false" class="input" type="text" name="password" id="password-input" />
+
+                <button class="submit" type="button" onclick="checkLogin()">Submit</button>
+                <p id="login-error" style="color: red;"></p>
+            </div>
+
+            <label for="blind-input" class="avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 64 64" id="monkey">
+                    <ellipse cx="53.7" cy="33" rx="8.3" ry="8.2" fill="#89664c"></ellipse>
+                    <ellipse cx="53.7" cy="33" rx="5.4" ry="5.4" fill="#ffc5d3"></ellipse>
+                    <ellipse cx="10.2" cy="33" rx="8.2" ry="8.2" fill="#89664c"></ellipse>
+                    <ellipse cx="10.2" cy="33" rx="5.4" ry="5.4" fill="#ffc5d3"></ellipse>
+                    <g fill="#89664c">
+                        <path d="m43.4 10.8c1.1-.6 1.9-.9 1.9-.9-3.2-1.1-6-1.8-8.5-2.1 1.3-1 2.1-1.3 2.1-1.3-20.4-2.9-30.1 9-30.1 19.5h46.4c-.7-7.4-4.8-12.4-11.8-15.2"></path>
+                        <path d="m55.3 27.6c0-9.7-10.4-17.6-23.3-17.6s-23.3 7.9-23.3 17.6c0 2.3.6 4.4 1.6 6.4-1 2-1.6 4.2-1.6 6.4 0 9.7 10.4 17.6 23.3 17.6s23.3-7.9 23.3-17.6c0-2.3-.6-4.4-1.6-6.4 1-2 1.6-4.2 1.6-6.4"></path>
+                    </g>
+                    <path d="m52 28.2c0-16.9-20-6.1-20-6.1s-20-10.8-20 6.1c0 4.7 2.9 9 7.5 11.7-1.3 1.7-2.1 3.6-2.1 5.7 0 6.1 6.6 11 14.7 11s14.7-4.9 14.7-11c0-2.1-.8-4-2.1-5.7 4.4-2.7 7.3-7 7.3-11.7" fill="#e0ac7e"></path>
+                    <g fill="#3b302a" class="monkey-eye-nose">
+                        <path d="m35.1 38.7c0 1.1-.4 2.1-1 2.1-.6 0-1-.9-1-2.1 0-1.1.4-2.1 1-2.1.6.1 1 1 1 2.1"></path>
+                        <path d="m30.9 38.7c0 1.1-.4 2.1-1 2.1-.6 0-1-.9-1-2.1 0-1.1.4-2.1 1-2.1.5.1 1 1 1 2.1"></path>
+                        <ellipse cx="40.7" cy="31.7" rx="3.5" ry="4.5" class="monkey-eye-r"></ellipse>
+                        <ellipse cx="23.3" cy="31.7" rx="3.5" ry="4.5" class="monkey-eye-l"></ellipse>
+                    </g>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 64 64" id="monkey-hands">
+                    <path fill="#89664C" d="M9.4,32.5L2.1,61.9H14c-1.6-7.7,4-21,4-21L9.4,32.5z"></path>
+                    <path fill="#FFD6BB" d="M15.8,24.8c0,0,4.9-4.5,9.5-3.9c2.3,0.3-7.1,7.6-7.1,7.6s9.7-8.2,11.7-5.6c1.8,2.3-8.9,9.8-8.9,9.8
+s10-8.1,9.6-4.6c-0.3,3.8-7.9,12.8-12.5,13.8C11.5,43.2,6.3,39,9.8,24.4C11.6,17,13.3,25.2,15.8,24.8"></path>
+                    <path fill="#89664C" d="M54.8,32.5l7.3,29.4H50.2c1.6-7.7-4-21-4-21L54.8,32.5z"></path>
+                    <path fill="#FFD6BB" d="M48.4,24.8c0,0-4.9-4.5-9.5-3.9c-2.3,0.3,7.1,7.6,7.1,7.6s-9.7-8.2-11.7-5.6c-1.8,2.3,8.9,9.8,8.9,9.8
+s-10-8.1-9.7-4.6c0.4,3.8,8,12.8,12.6,13.8c6.6,1.3,11.8-2.9,8.3-17.5C52.6,17,50.9,25.2,48.4,24.8"></path>
+                </svg>
+            </label>
+        </div>
+    </div>
+
+    <!-- SECTION FOR THE MAIN APPLICATION -->
+    <div id="main-app-section" style="display: none;">
+        <div class="bg-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+
+        <header>
+            <div class="container">
+                <nav class="glass">
+                    <div class="logo" onclick="showPage('home')">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 48 48" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="16" cy="16" r="5" opacity="0.9" />
+                                <circle cx="32" cy="16" r="4" opacity="0.8" />
+                                <circle cx="16" cy="32" r="4" opacity="0.7" />
+                                <circle cx="32" cy="32" r="5" opacity="0.85" />
+                                <circle cx="24" cy="8" r="2" opacity="1" />
+                                <circle cx="8" cy="24" r="2" opacity="0.9" />
+                                <circle cx="40" cy="24" r="2" opacity="0.9" />
+                                <circle cx="24" cy="40" r="2" opacity="1" />
+                                <circle cx="8" cy="8" r="1" opacity="0.6" />
+                                <circle cx="40" cy="8" r="1" opacity="0.6" />
+                                <circle cx="8" cy="40" r="1" opacity="0.6" />
+                                <circle cx="40" cy="40" r="1" opacity="0.6" />
+                            </svg>
+                        </div>
+                        <div class="logo-titles">
+                            <span class="main-title">CIB Egypt</span>
+                            <span id="typed-logo" class="sub-title"></span>
+                        </div>
+                    </div>
+                    <div class="nav-links">
+                        <a href="#" onclick="showPage('home')" class="active">Home</a>
+                        <a href="#" onclick="showPage('links')">Links</a>
+                        <a href="#" id="nav-script" onclick="showPage('Script')">Script</a>
+                        <a href="#" id="nav-Email" onclick="showPage('Email')" style="display: none;">Email</a>
+                        <a href="#" id="nav-complaint" onclick="showPage('Complaint')" style="display: none;">Complaint</a>
+                        <a href="#" id="nav-complaint-tool" onclick="showPage('ComplaintTool')" style="display: none;">Complaint Tool</a>
+                        <a href="#" id="nav-request" onclick="showPage('Request')" style="display: none;">Request</a>
+
+                        <a href="#" id="login-btn" onclick="showLoginPage()">Login 🔐</a>
+                        <a href="#" id="logout-btn" style="display: none;">Logout ❌</a>
+
+                        <div class="lang-toggle" style="display: none;">
+                            <button id="lang-en" class="active">EN</button>
+                            <button id="lang-ar">AR</button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- HOME PAGE -->
+        <div id="home" class="page active">
+            <div class="container">
+                <div class="content-wrapper">
+                    <section class="hero-slider glass">
+                        <div class="slider-container">
+                            <div class="slide active">
+
+                                <img src="image\hero-bg.jpg" alt="Bank To Trust" class="slide-bg">
+                                <div class="slide-content">
+                                    <h1>The Bank To Trust</h1>
+                                    <p>To transform traditional financial services into simple and accessible solutions by investing in people, data and digitalization to serve tomorrow's needs today.<br><strong>Dream Up</strong></p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="image\p1.jpg" alt="Innovation" class="slide-bg">
+                                <div class="slide-content">
+                                    <h1>Leading With Innovation</h1>
+                                    <p>We are constantly evolving to meet the changing needs of our customers through cutting-edge technology and services.<br><strong>Future Ready</strong></p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="image\p3.jpg" alt="manio" class="slide-bg">
+                                <div class="slide-content">
+                                    <h1>Leading With Innovation</h1>
+                                    <p>We are constantly evolving to meet the changing needs of our customers through cutting-edge technology and services.<br><strong>Future coming</strong></p>
+                                </div>
+                            </div>
+                            <!-- <div class="slide">
+                                <img src="" alt="" class="slide-bg">
+                                <div class="slide-content">
+                                    <h1>Leading With Innovation</h1>
+                                    <p>We are constantly evolving to meet the changing needs of our customers through cutting-edge technology and services.<br><strong>Future coming</strong></p>
+                                </div>
+                            </div> -->
+
+                            <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+                            <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
+                        </div>
+                    </section>
+
+                    <!-- Hero Section with Slider Look -->
+                    <section class="hero glass" style="text-align: center; padding: 60px 20px;">
+                        <h1>Welcome to the Future of Support & Efficiency!</h1>
+                        <p style="font-size: 1.2rem; margin: 20px 0;">Here’s a streamlined hub to help you stay on top of everything — from key complaint tracking to essential scripts and high-usage resources.<br><strong></p>
+                    </section>
+                    <!-- Info / About Section (Inspired by index2.html) -->
+                    <section class="glass" style="padding: 40px; margin-top: 30px; display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 300px;">
+                            <h2 style="color: #4A9DEC; margin-bottom: 20px;">Welcome to Contact Center Guide</h2>
+                            <p style="line-height: 1.6; color: #e0e0e0;">
+                                We hold ourselves accountable to a higher standard of responsibility. We are doing the right things, even if it is commercially less attractive. We communicate clearly what we can deliver and keep our word. We do things right and create solutions that
+                                work.
+                            </p>
+                        </div>
+                        <div style="flex: 1; min-width: 300px; text-align: center;">
+                            <img src="image\about-img.png" alt="About CIB" style="max-width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                        </div>
+                    </section>
+                    <!-- 3D Board of Directors Section -->
+            <section class="directors-section-3d">
+                <h2 class="section-title">Board of Directors</h2>
+                
+                <div class="carousel-scene">
+                    <div class="carousel-spinner">
+                        
+                        <!-- Card 1 -->
+                        <div class="director-card-3d">
+                            <img src="image//hero-bg.jpg" alt="Director 1">
+                            <div class="info-overlay">
+                                <h4>Hisham Ezz El Arab</h4>
+                                <p>CEO</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="director-card-3d">
+                            <img src="image//p1.jpg" alt="Director 2">
+                            <div class="info-overlay">
+                                <h4>ISLAM ZEKRY</h4>
+                                <p>Board Member</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="director-card-3d">
+                            <img src="image//p2.jpg" alt="Director 3">
+                            <div class="info-overlay">
+                                <h4>RASHWAN HAMMADY</h4>
+                                <p>Board Member</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="director-card-3d">
+                            <img src="image//p3.jpg" alt="Member 4">
+                            <div class="info-overlay">
+                                <h4>AMR ELGANAINY</h4>
+                                <p>Executive</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="director-card-3d">
+                            <img src="image/Shaher.jpg" alt="Member 5">
+                            <div class="info-overlay">
+                                <h4>SHAHER ELDESOKY</h4>
+                                <p>SV</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="director-card-3d">
+                            <img src="image\Elhamy.jpg" alt="Member 6">
+                            <div class="info-overlay">
+                                <h4>MOHAMED TAREK</h4>
+                                <p>S AGENT</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>          
+            
+            <!-- 3. Updates & News (Accordion Style) -->
+                    <section class="updates-section">
+                        <h2 class="section-title">Latest Updates & Products</h2>
+                        <div class="accordion-container">
+
+                            <!-- <div class="card">
+                                <div class="card-header" onclick="toggleCard('script_cru')" aria-expanded="false">
+                                    <span> Titel </span>
+                                    <span class="toggle-icon">&#9660;</span>
+                                </div>
+                                <div class="card-content" id="script_cru" style="direction: rtl; text-align: right;">
+                                    <p style="font-weight: bold; margin-bottom: 10px;">العميل: من فضلك انا اريد التحول لمديرك / اريد أكلم المدير</p>
+                                    <div class="content-box">
+                                        <p>الموظف: تمام يا فندم انا من خلالي بقدم طلب لحضرتك والمدير سيتواصل مع حضرتك.</p>
+                                        <ul style="list-style-type: disc; padding-right: 20px; margin-top: 10px;">
+                                            <li><strong>Prime & Plus:</strong> على مدار اليوم إذا كان الطلب قبل الساعة 4 مساءً</li>
+                            <li><strong>Wealth & Private:</strong> خلال ساعتين</li>
+                            </ul>
+                            <hr style="border-color: rgba(255,255,255,0.1); margin: 15px 0;">
+                            <p style="font-weight: bold; color: #ec2626;">إذا رفض العميل الانتظار:</p>
+                            <p><strong>العميل:</strong> لا انا محتاج تحول للمدير حالاً ومش هنتظر.</p>
+                            <p><strong>الموظف:</strong> انا متفهم ان حضرتك محتاج تكلم المدير حالا ولكن هو بالفعل معاه مكالمة فلو حضرتك مش حابب انتظر ممکن حضرتك تنهي المكالمة والمدير بمجرد انتهاء المكالمة اللي معاه هيتواصل مع حضرتك مباشرة.</p>
+                            <hr style="border-color: rgba(255,255,255,0.1); margin: 15px 0;">
+                            <p style="font-weight: bold; color:#ec2626;">إذا أصر العميل على الانتظار:</p>
+                            <p><strong>العميل:</strong> لا انا هفضل معاك على الانتظار لحد ما تحولني للمدير.</p>
+                            <p><strong>الموظف:</strong> تمام يا فندم ولكن اسمحلي اوضح لحضرتك ان فترة الانتظار ممكن تكون أكثر من دقيقتين وده بسبب ان المدير بيكون معاه مكالمة مع عميل اخر ثم الانتهاء منها بقدر احول مكالمة حضرتك لي.</p>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="card">
+            <div class="card-header" onclick="toggleCard('override_code')" aria-expanded="false">
+                <span>Override Code</span>
+                <span class="toggle-icon">&#9660;</span>
+            </div>
+
+            <div class="card-content" id="override_code">
+                <div class="content-box">
+
+                    <table class="override-table">
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>DES</td>
+                                <td>CUSTOMER DEATH</td>
+                            </tr>
+                            <tr>
+                                <td>FRM</td>
+                                <td>FRAUD MANAGEMENT</td>
+                            </tr>
+                            <tr>
+                                <td>HOR</td>
+                                <td>HOLD RELEASE</td>
+                            </tr>
+                            <tr>
+                                <td>INA</td>
+                                <td>INACTIVE CARDS</td>
+                            </tr>
+                            <tr>
+                                <td>KYC</td>
+                                <td>K.Y.C.</td>
+                            </tr>
+                            <tr>
+                                <td>MSU</td>
+                                <td>MISUSE</td>
+                            </tr>
+                            <tr>
+                                <td>OVR</td>
+                                <td>OVERDRAWN ACCOUNT</td>
+                            </tr>
+                            <tr>
+                                <td>PRW</td>
+                                <td>PENDING RENEWAL</td>
+                            </tr>
+                            <tr>
+                                <td>SRW</td>
+                                <td>STOP RENEWAL</td>
+                            </tr>
+                            <tr>
+                                <td>TRW</td>
+                                <td>TORIUSIM STOP RENEWAL</td>
+                            </tr>
+                            <tr>
+                                <td>WDS</td>
+                                <td>WRITE-OFF DECEASED CUST.</td>
+                            </tr>
+                            <tr>
+                                <td>WRF</td>
+                                <td>CITI WRITE OFF</td>
+                            </tr>
+                            <tr>
+                                <td>WRT</td>
+                                <td>WRITE OFF</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" onclick="toggleCard('news_3')" aria-expanded="false">
+                <span>كارت CIB talabat 🍔💳</span>
+                <span class="toggle-icon">&#9660;</span>
+            </div>
+
+            <div class="card-content" id="news_3">
+                <div class="content-box">
+
+                    <div class="content-box">
+
+                        <h3>💳 نبذة عن الكارت</h3>
+                        <p>
+                            كارت CIB talabat هو كارت ائتمان من CIB بالتعاون مع talabat، يوفر رصيد talabat Pay وكاش باك وتوصيل مجاني ومكافآت ترحيبية بعد تفعيل الكارت.
+                        </p>
+
+
+                        <h3>🎁 مكافأة الترحيب</h3>
+                        <ul>
+                            <li>صرف 10,000 جنيه خلال أول شهرين → تحصل على 1,000 جنيه رصيد talabat Pay.</li>
+                            <li>صرف 75,000 جنيه خلال أول 6 شهور → تحصل على 1,000 جنيه إضافية.</li>
+                            <li>مكافأة أول شهرين تضاف أول أسبوع من الشهر الثالث.</li>
+                            <li>مكافأة أول 6 شهور تضاف أول أسبوع من الشهر السابع.</li>
+                        </ul>
+
+
+                        <h3>💰 الكاش باك</h3>
+                        <ul>
+                            <li>لازم تصرف 1,000 جنيه شهريًا على talabat.</li>
+                            <li>من 1,000 إلى 19,999 جنيه → كاش باك 20% (بحد أقصى 100 جنيه للطلب).</li>
+                            <li>20,000 جنيه أو أكثر → كاش باك 25% (بحد أقصى 100 جنيه للطلب).</li>
+                            <li>1% كاش باك على أي مشتريات خارج talabat.</li>
+                            <li>الحد الأقصى للكاش باك: 1,200 جنيه شهريًا.</li>
+                        </ul>
+
+
+                        <h3>🚚 التوصيل المجاني</h3>
+                        <ul>
+                            <li>يتم التفعيل خلال 5 أيام عمل بعد تفعيل الكارت.</li>
+                            <li>طلبات المطاعم: مجاني من 300 جنيه.</li>
+                            <li>talabat mart والمتاجر: مجاني من 450 جنيه.</li>
+                        </ul>
+
+
+                        <h3>💳 talabat Pay</h3>
+                        <ul>
+                            <li>يستخدم الرصيد عند الدفع من خلال "استخدام رصيد طلبات".</li>
+                            <li>صلاحية الرصيد سنتين من تاريخ الإضافة.</li>
+                            <li>ينزل الرصيد أول أسبوع عمل من كل شهر.</li>
+                        </ul>
+
+
+                        <h3>🔢 الرقم المرجعي</h3>
+                        <p>
+                            الحساب → talabat Pay → الثلاث نقاط → الرقم المرجعي.
+                        </p>
+
+
+                        <h3>👥 الكروت الإضافية</h3>
+                        <ul>
+                            <li>يمكن إصدار حتى 4 كروت إضافية.</li>
+                            <li>تحصل على 1% كاش باك فقط.</li>
+                            <li>الرصيد ينزل على حساب حامل الكارت الأساسي.</li>
+                        </ul>
+
+
+                        <h3>ℹ️ معلومات مهمة</h3>
+                        <ul>
+                            <li>الكارت يعمل داخل وخارج talabat.</li>
+                            <li>يدعم Apple Pay.</li>
+                            <li>لا يوجد نقاط ولاء.</li>
+                            <li>رسوم الإصدار: 600 جنيه.</li>
+                            <li>الفائدة: 4.5% شهريًا.</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div class="card-header" onclick="toggleCard('cards_family')" aria-expanded="false">
+            <span>Credit Cards Families 💳</span>
+            <span class="toggle-icon">&#9660;</span>
+        </div>
+
+        <div class="card-content" id="cards_family">
+            <div class="content-box">
+
+                <table class="interest-table">
+                    <thead>
+                        <tr>
+                            <th>Family</th>
+                            <th>Card Type</th>
+                            <th>Min Limit</th>
+                            <th>Max Limit</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Bonus Family</td>
+                            <td>Gold Master</td>
+                            <td>EGP 1,000</td>
+                            <td>EGP 20,000</td>
+                        </tr>
+
+                        <tr>
+                            <td>Bonus Family</td>
+                            <td>Titanium Master</td>
+                            <td>EGP 10,000</td>
+                            <td>EGP 150,000</td>
+                        </tr>
+
+                        <tr>
+                            <td>Bonus Family</td>
+                            <td>Heya Master</td>
+                            <td>EGP 10,000</td>
+                            <td>EGP 150,000</td>
+                        </tr>
+
+                        <tr>
+                            <td>Bonus Family</td>
+                            <td>Platinum Master</td>
+                            <td>EGP 30,000</td>
+                            <td>EGP 500,000</td>
+                        </tr>
+
+                        <tr>
+                            <td>Bonus Family</td>
+                            <td>World Master</td>
+                            <td>EGP 100,000</td>
+                            <td>EGP 1,000,000</td>
+                        </tr>
+
+                        <tr>
+                            <td>Bonus Family</td>
+                            <td>World Elite Master</td>
+                            <td>EGP 250,000</td>
+                            <td>EGP 2,000,000</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Persona Based</td>
+                            <td>Cash Back</td>
+                            <td>EGP 10,000</td>
+                            <td>EGP 50,000</td>
+                        </tr>
+
+                        <tr>
+                            <td>Persona Based</td>
+                            <td>Swype 12</td>
+                            <td>EGP 10,000</td>
+                            <td>EGP 500,000</td>
+                        </tr>
+
+                        <tr>
+                            <td>Persona Based</td>
+                            <td>Swype 36</td>
+                            <td>EGP 20,000</td>
+                            <td>EGP 1,000,000</td>
+                        </tr>
+
+                        <tr>
+                            <td>Persona Based</td>
+                            <td>Swype 60</td>
+                            <td>EGP 30,000</td>
+                            <td>EGP 2,000,000</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Co-Brand</td>
+                            <td>CIB Noon Visa</td>
+                            <td>EGP 10,000</td>
+                            <td>EGP 150,000</td>
+                        </tr>
+
+                        <tr>
+                            <td>Co-Brand</td>
+                            <td>CIB EXPLORE World</td>
+                            <td>EGP 50,000</td>
+                            <td>EGP 1,000,000</td>
+                        </tr>
+
+                        <tr>
+                            <td>Co-Brand</td>
+                            <td>CIB EXPLORE Platinum</td>
+                            <td>EGP 10,000</td>
+                            <td>EGP 49,999</td>
+                        </tr>
+
+                        <tr>
+                            <td>Co-Brand</td>
+                            <td>CIB talabat Card</td>
+                            <td>EGP 10,000</td>
+                            <td>EGP 500,000</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+
+    </section>
+    <!-- Testimonials / Team Section -->
+    <section style="margin-top: 50px;">
+        <h2 style="text-align: center; margin-bottom: 30px; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">SYSTEM CREATOR</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+
+            <!-- Card 1 -->
+            <div class="glass" style="padding: 20px; text-align: center;">
+                <img src="image\Tarek.jpeg" alt="Mohamed Tarek" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 15px; border: 3px solid #4A9DEC;">
+                <h4 style="color: white;">Mohamed Tarek</h4>
+                <p style="font-size: 0.9em; color: #aaa;">We hold ourselves accountable to a higher standard of responsibility.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <!-- <div class="glass" style="padding: 20px; text-align: center;">
+                                <img src="image\Elhamy.jpg" alt="Elhamy Ahmed" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 15px; border: 3px solid #4A9DEC;">
+                                <h4 style="color: white;">Elhamy Ahmed</h4>
+                                <p style="font-size: 0.9em; color: #aaa;">We strive to offer the best products and highest quality service.</p>
+                            </div> -->
+
+            <!-- Card 3 -->
+            <div class="glass" style="padding: 20px; text-align: center;">
+                <img src="image\Shaher.jpg" alt="Shaher Eldesoky" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 15px; border: 3px solid #4A9DEC;">
+                <h4 style="color: white;">Shaher Eldesoky</h4>
+                <p style="font-size: 0.9em; color: #aaa;">We embrace a changing market environment and respond decisively.</p>
+            </div>
+        </div>
+        <!-- 4. Contact Info Footer -->
+        <section class="contact-footer glass">
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="icon-phone">📞</i>
+                    <div>
+                        <strong>Smart Wallet:</strong> (+202)19716<br>
+                        <strong>Business Banking:</strong> (+202)16677<br>
+                        <strong>Merchant Support:</strong> (+202)24565999
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="icon-phone">📞</i>
+                    <div>
+                        <strong>Prime & Plus:</strong> (+202)19666<br>
+                        <strong>Wealth & Private:</strong> (+202)19847
+                    </div>
+                </div>
+                <div class="contact-item email-item">
+                    <a href="mailto:mohamed.tali@cibeg.com?subject=Feedback" class="email-link">
+                        <span class="email-icon">✉️</span>
+                        <span>Send Feedback Email</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        </div>
+        </div>
+        </div>
+    </section>
+    </div>
+    </div>
+    </div>
+    <!--links -->
+    <div id="links" class="page">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="hero glass">
+                    <div class="hero-image">
+                        <img src="image\about-img.png" alt="Modern Technology Interaction" />
+                    </div>
+                    <div class="hero-content">
+                        <h1>Important Links</h1>
+                        <p>Access all your essential tools and resources from here.</p>
+                    </div>
+                </section>
+
+                <section class="features">
+                    <div class="buttons-wrapper">
+                        <button onclick="window.open('https://uccefinesseproda.hodomain.local/desktop/logon.html?locale=en_US&fromlogout=true/', '_blank')">Login link 1</button>
+                        <button onclick="window.open('https://uccefinesseprodb.hodomain.local/desktop/logon.html?locale=en_US&fromlogout=true/', '_blank')">Login link 2</button>
+                        <button onclick="window.open('https://crmprod.hodomain.local:9001/siebel/app/fins/enu/', '_blank')">CRM </button>
+                        <button onclick="window.open('https://corebanking.cibeg.com/r09cib/servlet/BrowserServlet', '_blank')">T24</button>
+                        <button onclick="window.open('http://10.11.2.39/cortexWebSite/ChangeCardStatus.aspx', '_blank')">Cortex</button>
+                        <button onclick="window.open('https://10.11.65.45:9443/cortex-web/app/app', '_blank')">Fraud Cortex</button>
+                        <button onclick="window.open('https://vascoadmin.hodomain.local/viewLogin.action', '_blank')">Vasco</button>
+                        <button onclick="window.open('https://ebanking.cibeg.com:8443/WebAdmin', '_blank')">CR2</button>
+                        <button onclick="window.open('https://cibpoints-loyalty360.dsquares.com', '_blank')"> Loyalte</button>
+                        <button onclick="window.open('https://www.mastercardconnect.com/', '_blank')">Bonus</button>
+                        <button onclick="window.open('https://10.232.1.124/MOBPAY/Login.aspx/', '_blank')">Mob pay</button>
+                        <button onclick="window.open('https://istvip.hodomain.local/ist-gui/', '_blank')">IST</button>
+                        <button onclick="window.open('http://10.111.103.172/IPNAdminPortal/login/', '_blank')">IPN</button>
+                        <button onclick="window.open('https://10.11.65.105/wap/login/', '_blank')">Apple Pay</button>
+                        <button onclick="window.open('https://statements.hodomain.local/Statements/Login.aspx', '_blank')"> Historical Statement Portal </button>
+                        <button onclick="window.open('https://uccecuicproda.hodomain.local:8444/cuicui/Main.jsp#/reports/', '_blank')">Queue</button>
+                        <button onclick="window.open('https://uccewfmappprod.hodomain.local/TeleoptiWFM//', '_blank')">Teleopti</button>
+                        <button onclick="window.open('https://iam.hodomain.local:9343/', '_blank')"> IGI</button>
+                        <button onclick="window.open('https://cib-intranet/pages/Dashboard3.aspx', '_blank')"> Intranet</button>
+                        <button onclick="window.open('https://www.linkedin.com/', '_blank')">LinkedIn</button>
+                        <button onclick="window.open('https://translate.google.com.eg/', '_blank')">Translate</button>
+                        <button onclick="window.open('https://www.cibeg.com/', '_blank')">CIB Bank</button>
+                        <button onclick="window.open('https://cibeg.taleo.net/careersection/cib_in/jobsearch.ftl', '_blank')">Taleo</button>
+                        <button onclick="window.open('https://itsm.hodomain.local/SM9/ess.do', '_blank')">SERVICE DESK</button>
+                        <button onclick="window.open('https://cibex.cibeg.com/owa//', '_blank')">Outlook</button>
+                        <button onclick="window.open('https://digitalinternetbanking.cibeg.com/login/', '_blank')">New APP</button>
+                        <button onclick="window.open('https://10.11.66.25/callrec/index.jsp', '_blank')">Zoom 1</button>
+                        <button onclick="window.open('https://10.11.66.62/callrec/index.jsp', '_blank')">Zoom 2</button>
+                        <button onclick="window.open('https://track1.union-courier.net/c3i3b/main.php', '_blank')">Union</button>
+                        <button onclick="window.open('https://track1.union-courier.net/cod/all_tr.php', '_blank')">Union 2</button>
+                        <button onclick="window.open('https://www.absegy.com/en', '_blank')">ABS</button>
+                        <button onclick="window.open('https://gexpress-eg.com', '_blank')">Gexpress</button>
+                        <button onclick="window.open('https://www.egyptexpress.com.eg/en-us/user/login/', '_blank')">FedEx</button>
+                        <button onclick="window.open('https://skybagegypt.com/ar/Track', '_blank')">SKY bag</button>
+                        <button onclick="window.open('http://portal.smartcom.com.eg/portal/index.php?uid=CIBCC&upwd=183415', '_blank')">Smart</button>
+                        <button onclick="window.open('https://cib-intranet/Operations%20Group/Credit%20Card%20Monitor/Forms/AllItems.aspx', '_blank')">Missing Policy for Debit cards</button>
+                        <button onclick="window.open('https://www.aramex.com/ae/en', '_blank')">Aramex</button>
+                        <button onclick="window.open('file://sv1-dfs/Data%20Share--SV1%20Local%20server/Call%20Center/Call%20Center%20Qnap/Sheets%20Support/Internal%20(Conceirge%20Codes%20&%20Officers%20Data).htm', '_blank')">PCA SHORT LIST</button>
+                        <button onclick="window.open('https://cibknowledgehub.sprinklr.com/', '_blank')">Knowledge Hub</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- Complaint PAGE -->
+
+    <div id="Complaint" class="page">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="card">
+                    <div class="card-header" onclick="toggleCard('cashWithdrawalCard')" aria-expanded="false">
+                        <span>Cash withdrawal from Non CIB ATM CCU Template</span>
+                        <span class="toggle-icon">&#9660;</span>
+                    </div>
+                    <div class="card-content" id="cashWithdrawalCard">
+                        <p>Customer is complaining from cash withdrawal dispute from Non CIB ATM</p>
+
+                        <div class="form-row">
+                            <label for="accountNumCIB">Account #/Credit Card Acc #:</label>
+                            <input type="text" id="accountNumCIB" name="accountNumCIB" placeholder="Enter number">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="maskedCardCIB">Masked Card#:</label>
+                            <input type="text" id="maskedCardCIB" name="maskedCardCIB" placeholder="Enter masked card">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="transactionDateCIB">Transaction date:</label>
+                            <input type="date" id="transactionDateCIB" name="transactionDateCIB">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="transactionTimeCIB">Transaction time:</label>
+                            <input type="time" id="transactionTimeCIB" name="transactionTimeCIB">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="transactionAmountCIB">Transaction amount:</label>
+                            <input type="number" id="transactionAmountCIB" name="transactionAmountCIB" placeholder="Enter amount">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="missingAmountCIB">Missing amount:</label>
+                            <input type="number" id="missingAmountCIB" name="missingAmountCIB" placeholder="Enter missing amount">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="copyTransactionCIB">Copy of transaction:</label>
+                            <input type="text" id="copyTransactionCIB" name="copyTransactionCIB" placeholder="Attach or describe">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="callingPartyCIB">Calling Party:</label>
+                            <input type="text" id="callingPartyCIB" name="callingPartyCIB" placeholder="Enter details">
+                        </div>
+
+                        <div class="buttons-container">
+                            <button class="action-button copy-button" onclick="copyTemplate('cashWithdrawalCard')">Copy Template</button>
+                            <button class="action-button clear-button" onclick="clearInputs('cashWithdrawalCard')">Clear Inputs</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" onclick="toggleCard('chargebackCard')" aria-expanded="false">
+                        <span>Charge back complaint for Transaction</span>
+                        <span class="toggle-icon">&#9660;</span>
+                    </div>
+                    <div class="card-content" id="chargebackCard">
+                        <p>Customer is complaining transaction</p>
+
+                        <div class="form-row">
+                            <label for="accountNumCB">Account #/Credit Card Acc#:</label>
+                            <input type="text" id="accountNumCB" name="accountNumCB" placeholder="Enter number">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="maskedCardCB">Masked Card#:</label>
+                            <input type="text" id="maskedCardCB" name="maskedCardCB" placeholder="Enter masked card">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="transactionDateCB">Transaction date:</label>
+                            <input type="date" id="transactionDateCB" name="transactionDateCB">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="transactionTimeCB">Transaction time:</label>
+                            <input type="time" id="transactionTimeCB" name="transactionTimeCB">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="transactionAmountCB">Transaction amount:</label>
+                            <input type="number" id="transactionAmountCB" name="transactionAmountCB" placeholder="Enter amount">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="copyTransactionCB">Copy of transaction:</label>
+                            <input type="text" id="copyTransactionCB" name="copyTransactionCB" placeholder="Attach or describe">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="reasonOfDispute">Reason Of Dispute:</label>
+                            <select id="reasonOfDispute" name="reasonOfDispute">
+                        <option value="">-- Select one reason from below --</option>
+                        <option value="Transaction rejected but deducted (type of service or product requested)">Transaction rejected but deducted (type of service or product requested)</option>
+                        <option value="Transaction not Refunded as promised from Merchant (Receipt will be send to Cards@cibeg.com / Customer doesn't have refund receipt)">Transaction not Refunded as promised from Merchant (Receipt will be send to Cards@cibeg.com / Customer doesn't have refund receipt)</option>
+                        <option value="Subscription or service cancelled but merchant deduced the subscription (cancelation date)">Subscription or service cancelled but merchant deduced the subscription (cancelation date)</option>
+                        <option value="Duplicated transaction (date of both transaction)">Duplicated transaction (date of both transaction)</option>
+                        <option value="Product or service not received (type of service or product requested & the estimated date of delivery)">Product or service not received (type of service or product requested & the estimated date of delivery)</option>
+                    </select>
+                        </div>
+
+                        <div class="buttons-container">
+                            <button class="action-button copy-button" onclick="copyTemplate('chargebackCard')">Copy Template</button>
+                            <button class="action-button clear-button" onclick="clearInputs('chargebackCard')">Clear Inputs</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" onclick="toggleCard('incompleteCashDepositCard')" aria-expanded="false">
+                        <span>Incomplete Cash Deposit</span>
+                        <span class="toggle-icon">&#9660;</span>
+                    </div>
+                    <div class="card-content" id="incompleteCashDepositCard">
+                        <p>Customer complain from Incomplete Cash Deposit or Cash Withdrawal</p>
+
+                        <div class="form-row">
+                            <label for="accNumDeposit">Account/Credit Card Account Number/Smart wallet mobile:</label>
+                            <input type="text" id="accNumDeposit" name="accNumDeposit" placeholder="Enter number/mobile">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="maskedCardDeposit">Masked credit card:</label>
+                            <input type="text" id="maskedCardDeposit" name="maskedCardDeposit" placeholder="Enter masked card">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="machineNumDeposit">Machine Number:</label>
+                            <input type="number" id="machineNumDeposit" name="machineNumDeposit" placeholder="Max 4 digits" maxlength="4" oninput="this.value=this.value.slice(0,4)">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="dateDeposit">Date:</label>
+                            <input type="date" id="dateDeposit" name="dateDeposit">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="timeDeposit">Time:</label>
+                            <input type="time" id="timeDeposit" name="timeDeposit">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="amountDeposit">Amount:</label>
+                            <input type="number" id="amountDeposit" name="amountDeposit" placeholder="Enter amount">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="currencyDeposit">Currency:</label>
+                            <input type="text" id="currencyDeposit" name="currencyDeposit" placeholder="E.g., EGP, USD">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="missingAmountDeposit">Missing Amount:</label>
+                            <input type="number" id="missingAmountDeposit" name="missingAmountDeposit" placeholder="Enter missing amount">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="bankNoteCategoryDeposit">Bank Note Category:</label>
+                            <input type="text" id="bankNoteCategoryDeposit" name="bankNoteCategoryDeposit" placeholder="Enter category">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="customerMobileDeposit">Customer Mobile Number:</label>
+                            <input type="text" id="customerMobileDeposit" name="customerMobileDeposit" placeholder="Enter mobile number">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="cpNumDeposit">CP#:</label>
+                            <input type="text" id="cpNumDeposit" name="cpNumDeposit" placeholder="Enter CP#">
+                        </div>
+
+                        <div class="buttons-container">
+                            <button class="action-button copy-button" onclick="copyTemplate('incompleteCashDepositCard')">Copy Template</button>
+                            <button class="action-button clear-button" onclick="clearInputs('incompleteCashDepositCard')">Clear Inputs</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" onclick="toggleCard('incompleteFxTransactionCard')" aria-expanded="false">
+                        <span>Incomplete FX Transaction CCU Template</span>
+                        <span class="toggle-icon">&#9660;</span>
+                    </div>
+                    <div class="card-content" id="incompleteFxTransactionCard">
+                        <p>Customer complain from Incomplete FX Transaction</p>
+
+                        <div class="form-row">
+                            <label for="accNumFX">Account/Credit Card Account Number/Smart wallet mobile:</label>
+                            <input type="text" id="accNumFX" name="accNumFX" placeholder="Enter number/mobile">
+                        </div>
+                        <div class="form-row">
+                            <label for="CustomerFullName">Customer Full Name:</label>
+                            <input type="text" id="CustomerFullName" name="CustomerFullName" placeholder="Enter Customer Name">
+                        </div>
+                        <div class="form-row">
+                            <label for="maskedCardFX">Masked credit card:</label>
+                            <input type="text" id="maskedCardFX" name="maskedCardFX" placeholder="Enter masked card">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="machineNumFX">Machine Number:</label>
+                            <input type="number" id="machineNumFX" name="machineNumFX" placeholder="Max 4 digits" maxlength="4" oninput="this.value=this.value.slice(0,4)">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="dateFX">Date:</label>
+                            <input type="date" id="dateFX" name="dateFX">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="timeFX">Time:</label>
+                            <input type="time" id="timeFX" name="timeFX">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="amountFX">Amount:</label>
+                            <input type="number" id="amountFX" name="amountFX" placeholder="Enter amount">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="currencyFX">Currency:</label>
+                            <input type="text" id="currencyFX" name="currencyFX" placeholder="E.g., EGP, USD">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="missingAmountFX">Missing Amount:</label>
+                            <input type="number" id="missingAmountFX" name="missingAmountFX" placeholder="Enter missing amount">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="bankNoteCategoryFX">Bank Note Category:</label>
+                            <input type="text" id="bankNoteCategoryFX" name="bankNoteCategoryFX" placeholder="Enter category">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="customerMobileFX">Customer Mobile Number:</label>
+                            <input type="text" id="customerMobileFX" name="customerMobileFX" placeholder="Enter mobile number">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="cpNumFX">CP#:</label>
+                            <input type="text" id="cpNumFX" name="cpNumFX" placeholder="Enter CP#">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="nationalIDFX">National ID/Passport #:</label>
+                            <input type="text" id="nationalIDFX" name="nationalIDFX" placeholder="Enter ID/Passport">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="preferredBRRadFX">Preferred BR Rad:</label>
+                            <input type="text" id="preferredBRRadFX" name="preferredBRRadFX" placeholder="Enter branch details">
+                        </div>
+
+                        <div class="buttons-container">
+                            <button class="action-button copy-button" onclick="copyTemplate('incompleteFxTransactionCard')">Copy Template</button>
+                            <button class="action-button clear-button" onclick="clearInputs('incompleteFxTransactionCard')">Clear Inputs</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" onclick="toggleCard('Delay in debit / Credit card delivery')" aria-expanded="false">
+                        <span> Delay in debit / Credit card delivery </span>
+                        <span class="toggle-icon">&#9660;</span>
+                    </div>
+                    <div class="card-content" id="Delay in debit / Credit card delivery">
+                        <p>Customer is complaining from delay of Debit/Credit card delivery , delivery request has been assigned from our side however customer is complaining regarding the delay of delivery from courier company .</p>
+
+                        <div class="form-row">
+                            <label for="accNumFX">Customer Name:</label>
+                            <input type="text" id="CN" name="CN" placeholder="Enter CUSTOMER NAME">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="maskedCardFX">Mobile Number:</label>
+                            <input type="text" id="MN" name="MN" placeholder="Mobile Number">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="accNumFX">Masked Card:</label>
+                            <input type="text" id="maskedcard" name="maskedcard" placeholder="Enter masked card">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="accNumFX">Courier reference:</label>
+                            <input type="text" id="Courier reference" name="Courier reference" placeholder="Don't enter fake account for CC/enter policy reference">
+                        </div>
+                        <div class="form-row">
+                            <label for="reasonOfDispute">Courier company :</label>
+                            <select id="reasonOfDispute" name="reasonOfDispute">
+                        <option value="">-- Select one Courier company --</option>
+                        <option value="G-Express">G-Express </option>
+                        <option value="Skybag">Skybag</option>
+                        <option value="ABS">ABS</option>
+                        <option value="Union">Union</option>
+                        <option value="Smart">Smart</option>
+                        <option value="Aramex">Aramex</option>
+                        <option value="DHL">DHL</option>
+                    </select>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="dateFX">Pick Up date:</label>
+                            <input type="date" id="dateFX" name="dateFX">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="cpNumFX">Calling Party:</label>
+                            <input type="text" id="cpNumFX" name="cpNumFX" placeholder="Enter CP#">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="nationalIDFX">Delivery request:</label>
+                            <input type="text" id="Delivery request" name="Delivery request" placeholder="Delivery request">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="preferredBRRadFX">Address :</label>
+                            <input type="text" id="Address" name="Address" placeholder="Enter Address details">
+                        </div>
+
+                        <div class="buttons-container">
+                            <button class="action-button copy-button" onclick="copyTemplate('Delay in debit / Credit card delivery')">Copy Template</button>
+                            <button class="action-button clear-button" onclick="clearInputs('Delay in debit / Credit card delivery')">Clear Inputs</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" onclick="toggleCard('WrongCardDelivery')" aria-expanded="false">
+                        <span> Wrong Card Delivery </span>
+                        <span class="toggle-icon">&#9660;</span>
+                    </div>
+                    <div class="card-content" id="WrongCardDelivery">
+                        <p>The customer is complaining from wrong delivery of the Credit card as the customer didn’t receive the card till now</p>
+
+                        <div class="form-row">
+                            <label for="reasonComplaint">Reason of Complaint : </label>
+                            <input type="text" id="reasonComplaint" name="reasonComplaint" value="Customer didn't know the person who received the card / Card had been delivered to wrong address" readonly>
+                        </div>
+                        <div class="form-row">
+                            <label for="accNumFX">Masked Card:</label>
+                            <input type="text" id="maskedcard" name="maskedcard" placeholder="Enter masked card">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="accNumFX">Embossed on:</label>
+                            <input type="text" id="Embossedon" name="Embossedon" placeholder="Enter Embossed Name ">
+                        </div>
+
+
+                        <div class="form-row">
+                            <label for="accNumFX">Consignment Number:r</label>
+                            <input type="text" id="Consignment Number" name="Consignment Number" placeholder="Don't enter fake account for CC/Enter Shipment Number">
+                        </div>
+                        <div class="form-row">
+                            <label for="Couriercompany">Courier company :</label>
+                            <select id="Couriercompany" name="Couriercompany">
+                        <option value="">-- Select one Courier company --</option>
+                        <option value="G-Express">G-Express </option>
+                        <option value="Skybag">Skybag</option>
+                        <option value="ABS">ABS</option>
+                        <option value="Union">Union</option>
+                        <option value="Smart">Smart</option>
+                        <option value="Aramex">Aramex</option>
+                        <option value="DHL">DHL</option>
+                    </select>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="Cardtype">Card type: </label>
+                            <select id="Cardtype" name="Cardtype">
+                        <option value="">-- Select one Courier company --</option>
+                        <option value="New ">New </option>
+                        <option value="Renewal">Renewal </option>
+                        <option value="Replacement ">Replacement </option>
+                    </select>
+                        </div>
+
+
+                        <div class="form-row">
+                            <label for="Casereceived">Case received:</label>
+                            <input type="date" id="Casereceived" name="Casereceived">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="cpNumFX">Calling Party:</label>
+                            <input type="text" id="cpNumFX" name="cpNumFX" placeholder="Enter CP#">
+                        </div>
+
+                        <div class="buttons-container">
+                            <button class="action-button copy-button" onclick="copyTemplate('WrongCardDelivery')">Copy Template</button>
+                            <button class="action-button clear-button" onclick="clearInputs('WrongCardDelivery')">Clear Inputs</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" onclick="toggleCard('OpenEnvelope')" aria-expanded="false">
+                        <span> Open Envelope Complaint </span>
+                        <span class="toggle-icon">&#9660;</span>
+                    </div>
+                    <div class="card-content" id="OpenEnvelope">
+                        <p>The customer is complaining from receiving an open envelope of the debit / credit card.</p>
+
+                        <div class="form-row">
+                            <label for="maskedNumber">Masked Number:</label>
+                            <input type="text" id="maskedNumber" name="maskedNumber" placeholder="Enter Masked Number">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="accountNumber">Account:</label>
+                            <input type="text" id="accountNumber" name="accountNumber" placeholder="Enter Account Number">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="embossedDate">Card Embossed Date:</label>
+                            <input type="date" id="embossedDate" name="embossedDate">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="caseReceived">Case received:</label>
+                            <input type="date" id="caseReceived" name="caseReceived">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="courierCompany">Courier company :</label>
+                            <select id="courierCompany" name="courierCompany">
+                                <option value="">-- Select one Courier company --</option>
+                                <option value="G-Express">G-Express </option>
+                                <option value="Skybag">Skybag</option>
+                                <option value="ABS">ABS</option>
+                                <option value="Union">Union</option>
+                                <option value="Smart">Smart</option>
+                                <option value="Aramex">Aramex</option>
+                                <option value="DHL">DHL</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="pickupDate">Pick Up date:</label>
+                            <input type="date" id="pickupDate" name="pickupDate">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="policyNumber">Policy Number:</label>
+                            <input type="text" id="policyNumber" name="policyNumber" placeholder="Enter Policy Number">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="callingParty">Calling party:</label>
+                            <input type="text" id="callingParty" name="callingParty" placeholder="Enter CP#">
+                        </div>
+
+                        <div class="buttons-container">
+                            <button class="action-button copy-button" onclick="copyTemplate('OpenEnvelope')">Copy Template</button>
+                            <button class="action-button clear-button" onclick="clearInputs('OpenEnvelope')">Clear Inputs</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" onclick="toggleCard('CourierComplaint')" aria-expanded="false">
+                        <span> Courier Representative Misconduct </span>
+                        <span class="toggle-icon">&#9660;</span>
+                    </div>
+                    <div class="card-content" id="CourierComplaint">
+                        <p>Customer complains about the bad attitude & unprofessional way of communication from the courier representative.</p>
+
+                        <div class="form-row">
+                            <label for="incident">The incident that reflects the courier's attitude:</label>
+                            <select id="incident" name="incident">
+                <option value="">-- Select one incident --</option>
+                <option value="Refuse to deliver the card on the registered address">Refuse to deliver the card on the registered address</option>
+                <option value="Insisted to deliver their card on the registered address personally">Insisted to deliver their card on the registered address personally</option>
+                <option value="Request money for delivery">Request money for delivery</option>
+                <option value="Requesting a financial or moral reward for delivery">Requesting a financial or moral reward for delivery</option>
+                <option value="Used rude words and expressions to insult the customer">Used rude words and expressions to insult the customer</option>
+                <option value="Over promising to deliver this card before the normal TAT">Over-promised to deliver this card before the normal TAT</option>
+            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="policyNumber">Policy Number:</label>
+                            <input type="text" id="policyNumber" name="policyNumber" placeholder="Enter Policy Number">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="pickupDate">Pick Up Date:</label>
+                            <input type="date" id="pickupDate" name="pickupDate">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="cardStatus">Card status:</label>
+                            <select id="cardStatus" name="cardStatus">
+                <option value="">-- Select Status --</option>
+                <option value="Delivered">Delivered</option>
+                <option value="Returned">Returned</option>
+            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="courierCallingParty">Courier Calling Party:</label>
+                            <input type="text" id="courierCallingParty" name="courierCallingParty" placeholder="Enter Courier CP#">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="callingParty">Calling Party:</label>
+                            <input type="text" id="callingParty" name="callingParty" placeholder="Enter CP#">
+                        </div>
+
+                        <div class="buttons-container">
+                            <button class="action-button copy-button" onclick="copyTemplate('CourierComplaint')">Copy Template</button>
+                            <button class="action-button clear-button" onclick="clearInputs('CourierComplaint')">Clear Inputs</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- NEW COMPLAINT SEARCH TOOL PAGE -->
+    <div id="ComplaintTool" class="page">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="glass" style="padding: 20px 40px;">
+                    <h1 style="text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); text-align: center; margin-bottom: 30px;">Complaint Search Tool</h1>
+
+                    <!-- SEARCH BAR -->
+                    <div class="search-container">
+                        <input type="text" id="comp_search_input" placeholder="Search by Type, Area, Sub Area, Reason or Template...">
+                        <div id="comp_search_results_container"></div>
+                    </div>
+
+                    <!-- DROPDOWNS -->
+                    <div class="dropdown-container">
+                        <div>
+                            <label for="comp_type" style="display: block; margin-bottom: 8px;">Type</label>
+                            <select id="comp_type" class="dropdown" style="width: 100%;"><option value=""></option></select>
+                        </div>
+                        <div>
+                            <label for="comp_area" style="display: block; margin-bottom: 8px;">Area</label>
+                            <select id="comp_area" class="dropdown" style="width: 100%;"><option value=""></option></select>
+                        </div>
+                        <div>
+                            <label for="comp_subArea" style="display: block; margin-bottom: 8px;">Sub Area</label>
+                            <select id="comp_subArea" class="dropdown" style="width: 100%;"><option value=""></option></select>
+                        </div>
+                    </div>
+
+                    <!-- RESULT CARD MODIFIED -->
+                    <div id="comp_resultCard" class="result-card" style="display: none;">
+
+                        <!-- Header Row: Badges -->
+                        <div class="result-header-row">
+                            <div class="status-badge cc-badge" id="comp_related_cc_box">
+                                Related Call Center: <span id="comp_related_cc_val"></span>
+                            </div>
+                            <div class="status-badge ticket-badge">
+                                Ticket: <span id="comp_ticket_val"></span>
+                            </div>
+                        </div>
+
+                        <div class="result-main-content">
+                            <!-- Left Side: Reason & Template -->
+                            <div class="left-panel">
+                                <div class="info-group">
+                                    <label>Reason</label>
+                                    <div class="reason-content" id="comp_reason_content"></div>
+                                </div>
+                                <div class="info-group">
+                                    <label>Template</label>
+                                    <div class="template-content" id="comp_template_content"></div>
+                                </div>
+                            </div>
+
+                            <!-- Right Side: Requirements -->
+                            <div class="right-panel">
+                                <label>Requirements</label>
+                                <div class="requirements-grid" id="comp_req_content">
+                                    <!-- Requirements will load here -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Footer: Action -->
+                        <div class="result-footer">
+                            <button class="copy-script-btn" id="btn_copy_comp_all">
+            <span class="icon">📋</span> Copy Full Details
+        </button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </section>
+    </div>
+    </div>
+    </div>
+    <!-- Email PAGE -->
+    <div id="Email" class="page">
+        <div class="container">
+            <div class="email-buttons-grid">
+                <!-- Fraud Email Templates -->
+                <a href="mailto:SUPPORT_EMAIL@company.com?subject=Reopen%20Credit%20Card&body=Dears,%0D%0A%0D%0AWe%20kindly%20request%20your%20support%20to%20reopen%20the%20credit%20card,%20as%20the%20Customer%20has%20already%20confirmed%20the%20transaction%20after%20full%20verification.%0D%0A%0D%0APlease%20find%20the%20transaction%20details%20below%20for%20your%20review:%0D%0A%0D%0ACustomer%20Name:%20%0D%0A%0D%0AFake%20Account;%0D%0A%0D%0ACard%20Masked%20:%20%0D%0A%0D%0ACopy%20of%20transaction%20:%0D%0A%0D%0ACP:%0D%0A%0D%0AThank%20you%20for%20your%20support%20and%20cooperation.%0D%0A%0D%0ARegards."
+                    class="email-card">
+                    <span class="email-icon">✉️</span>
+                    <span class="email-text">Reopen Credit Card</span>
+                </a>
+
+                <a href="mailto:DEPT_EMAIL@example.com?subject=Reopen%20Debit%20Card&body=Dears,%0D%0A%0D%0AWe%20kindly%20request%20your%20support%20to%20reopen%20the%20Debit%20card,%20as%20the%20Customer%20has%20already%20confirmed%20the%20transaction%20after%20full%20verification.%0D%0A%0D%0APlease%20find%20the%20transaction%20details%20below%20for%20your%20review:%0D%0A%0D%0ACustomer%20Name:%20%0D%0A%0D%0AAccount;%0D%0A%0D%0ACard%20Masked%20:%20%0D%0A%0D%0ACopy%20of%20transaction%20:%0D%0A%0D%0ACP:%0D%0A%0D%0AThank%20you%20for%20your%20support%20and%20cooperation.%0D%0A%0D%0ARegards."
+                    class="email-card">
+                    <span class="email-icon">✉️</span>
+                    <span class="email-text">Reopen Debit Card</span>
+                </a>
+
+                <a href="mailto:APPROVE_DEPT@company.com?subject=Rejected%20transaction&body=Dears,%0D%0A%0D%0AWe%20kindly%20request%20your%20support%20to%20approve%20the%20below%20transaction,%20as%20the%20customer%20has%20confirmed%20that%20the%20transaction%20was%20made%20by%20himself%20after%20full%20verification.%0D%0A%0D%0APlease%20find%20the%20transaction%20details%20below%20for%20your%20review:%0D%0A%0D%0ACustomer%20Name:%0D%0A%0D%0AAccount%20/%20Fake%20Account%20:%0D%0A%0D%0ACard%20Masked:%0D%0A%0D%0ACopy%20of%20Transaction:%20%0D%0A%0D%0ACP:%0D%0A%0D%0AThank%20you%20for%20your%20support%20and%20cooperation.%0D%0A%0D%0ARegards,"
+                    class="email-card">
+                    <span class="email-icon">✉️</span>
+                    <span class="email-text">Rejected Transaction</span>
+                </a>
+
+                <a href="mailto:SUPPORT@company.com?subject=Wrong%20Transfer&body=Dears,%0D%0A%0D%0AWe%20kindly%20request%20your%20support%20to%20reverse%20the%20below%20transfer,%20as%20it%20was%20processed%20by%20mistake,%20as%20per%20the%20customer%27s%20request.%0D%0A%0D%0AThe%20error%20occurred%20due%20to%20one%20of%20the%20following%20reasons:%0D%0A%0D%0A-%20Transfer%20made%20to%20an%20incorrect%20beneficiary%0D%0A-%20Customer%20did%20not%20intend%20to%20process%20this%20transfer%0D%0A-%20Wrong%20transfer%20between%20accounts%0D%0A-%20Incorrect%20transfer%20amount%0D%0A-%20Incorrect%20details%20entered%20during%20the%20transfer%0D%0A%0D%0APlease%20find%20the%20transaction%20details%20below%20for%20your%20review:%0D%0A%0D%0ACustomer%20Name:%0D%0A%0D%0AAccount:%0D%0A%0D%0AFT:%0D%0A%0D%0ACopy%20of%20Transaction:%20Attached%0D%0A%0D%0ACP:%0D%0A%0D%0AThank%20you%20for%20your%20support%20and%20cooperation.%0D%0A%0D%0ARegards,"
+                    class="email-card">
+                    <span class="email-icon">✉️</span>
+                    <span class="email-text">Wrong Transfer</span>
+                </a>
+
+                <a href="mailto:COMPLAINTS_DEPT@company.com?subject=Urgent%20Incomplete%20Complaint%20Follow-Up&body=Dears,%0D%0A%0D%0AWe%20kindly%20request%20your%20support%20to%20follow%20up%20on%20an%20incomplete%20complaint,%20as%20the%20case%20is%20urgent%20due%20to%20:%20(%20Medical%20case%20-Traveling%20case%20-%20Debts%20with%20another%20bank%20-%20Outstanding%20checks%20)%0D%0A%0D%0AAccordingly,%20we%20kindly%20request%20that%20this%20matter%20be%20resolved%20as%20soon%20as%20possible.%0D%0A%0D%0APlease%20find%20the%20case%20details%20below%20for%20your%20review:%0D%0A%0D%0ACustomer%20Name:%0D%0A%0D%0AAccount:%0D%0A%0D%0ACP:%0D%0A%0D%0ASR:%0D%0A%0D%0AThank%20you%20for%20your%20support%20and%20cooperation.%0D%0A%0D%0ARegards,"
+                    class="email-card">
+                    <span class="email-icon">✉️</span>
+                    <span class="email-text">Urgent Complaint Follow-Up</span>
+                </a>
+
+                <a href="mailto:CHARGEBACK_DEPT@company.com?subject=Urgent%20Chargeback%20Complaint%20Follow-Up&body=Dears,%0D%0A%0D%0AWe%20kindly%20request%20your%20support%20to%20follow%20up%20on%20an%20Chargeback%20complaint,%20as%20the%20case%20is%20urgent%20due%20to:%20(%20Medical%20case%20-%20Traveling%20case%20-%20Debts%20with%20another%20bank%20-%20Outstanding%20checks%20)%0D%0A%0D%0AAccordingly,%20we%20kindly%20request%20that%20this%20matter%20be%20resolved%20as%20soon%20as%20possible.%0D%0A%0D%0APlease%20find%20the%20case%20details%20below%20for%20your%20review:%0D%0A%0D%0ACustomer%20Name:%0D%0A%0D%0AAccount/%20Fake%20Account%20:%0D%0A%0D%0AMasked%20:%0D%0A%0D%0ACP:%0D%0A%0D%0ASR:%0D%0A%0D%0AThank%20you%20for%20your%20support%20and%20cooperation.%0D%0A%0D%0ARegards,"
+                    class="email-card">
+                    <span class="email-icon">✉️</span>
+                    <span class="email-text">Urgent Chargeback Follow-Up</span>
+                </a>
+
+                <a href="mailto:RELEASE_DEPT@company.com?subject=Amount%20Release%20Request&body=Dears,%0D%0A%0D%0AWe%20kindly%20request%20your%20support%20to%20release%20the%20below%20amount%20from%20account%20as%20the%20CM%20already%20settled%20the%20(%20due%20/%20minimum%20amount%20/%20Over%20limit%20)%20as%20per%20customer%20request.%0D%0A%0D%0APlease%20find%20the%20case%20details%20below%20for%20your%20review:%0D%0A%0D%0ACustomer%20Name:%0D%0A%0D%0AAccount/%20Fake%20Account%20:%0D%0A%0D%0ACP:%0D%0A%0D%0ACopy%20Of%20Transaction%20:%0D%0A%0D%0AThank%20you%20for%20your%20support%20and%20cooperation.%0D%0A%0D%0ARegards,"
+                    class="email-card">
+                    <span class="email-icon">✉️</span>
+                    <span class="email-text">Amount Release Request</span>
+                </a>
+
+                <a href="mailto:SETTLEMENT_DEPT@cibeg.com?subject=Settlement%20Hold%20amount%20(%20Deduct%20)&body=Dears,%0D%0A%0D%0AWe%20kindly%20request%20your%20support%20to%20settle%20the%20below%20amount%20from%20account%20to%20settle%20(%20Credit%20/%20Loan%20/%20OD%20)%20to%20avoid%20any%20extra%20charges%20as%20per%20customer%20request.%0D%0A%0D%0APlease%20find%20the%20case%20details%20below%20for%20your%20review:%0D%0A%0D%0ACustomer%20Name:%0D%0A%0D%0AAccount/%20Fake%20Account%20:%0D%0A%0D%0ACP:%0D%0A%0D%0ACopy%20Of%20Transaction%20:%0D%0A%0D%0AThank%20you%20for%20your%20support%20and%20cooperation.%0D%0A%0D%0ARegards,"
+                    class="email-card">
+                    <span class="email-icon">✉️</span>
+                    <span class="email-text">Settlement Hold Amount</span>
+                </a>
+
+                <a href="mailto:DELIVERY_DEPT@cibeg.com?subject=Delivery%20exception&body=Dears,%0D%0A%0D%0AKindly%20need%20to%20deliver%20the%20card%20below%20exceptionally%20due%20to%20:%20(%20Reason%20of%20Exception%20)%0D%0A%0D%0APlease%20find%20the%20case%20details%20below%20for%20your%20review:%0D%0A%0D%0ACustomer%20Name:%0D%0A%0D%0APolicy%20%23%20%20%0D%0A%0D%0ACourier%20Company%20name:%20%20%0D%0A%0D%0AMob%20number:%23%20%20%0D%0A%0D%0ADelivery%20Address(Detailed):%20%20%0D%0A%0D%0ADelivery%20Request%20:%0D%0A%0D%0AComplaint%23%20%0D%0A%0D%0ARegards."
+                    class="email-card">
+                    <span class="email-icon">✉️</span>
+                    <span class="email-text">Delivery Exception</span>
+                </a>
+
+                <a href="mailto:OUTSIDE_DELIVERY@cibeg.com?subject=Card%20Delivery%20Outside%20Egypt%20(Masked%20%23%20or%20Customer%20%23%20%20:%20XXXXX)&body=Dears,%0D%0A%0D%0AKindly%20need%20your%20support%20as%20per%20customer%20Request%20to%20deliver%20the%20below%20card%20outside%20Egypt%20in%20the%20below%20address%0D%0A%0D%0APlease%20find%20the%20case%20details%20below%20for%20your%20review:%0D%0A%0D%0ACustomer%20Name%20:%20%0D%0AFull%20Detailed%20Address%20(Including%20Postal%20Code):%20%20%0D%0AValid%20International%20mobile%20no.%20:%20%20%20%20%20%20%20%20%0D%0APolicy%20Courier%20Ref%23%0D%0ACourier%20Name:%20%20%0D%0A%0D%0AYour%20help%20will%20be%20very%20appreciated.%0D%0ABest%20Regards."
+                    class="email-card">
+                    <span class="email-icon">✈️</span>
+                    <span class="email-text">Card Delivery Outside Egypt</span>
+                </a>
+
+                <a href="mailto:PRIVATE_SUPPORT@cibeg.com?subject=Private%20Customer%20Delivery%20to%20Exceptional%20Address%20T24%20CM%23XXXX&body=Dear%20All,%0D%0A%0D%0AKindly%20need%20your%20assistance%20to%20proceed%20our%20mentioned%20Customer%E2%80%99s%20card%20delivery%20to%20an%20exceptional%20address%20for%20only%20this%20time%20without%20changing%20the%20registered%20address.%0D%0A%0D%0ACustomer%20Name:%0D%0A%0D%0AT24%20CM%23%0D%0A%0D%0APolicy%20Ref%23%0D%0A%0D%0ACard%20Location:%20Courier%20Name%20/%20DCU%0D%0A%0D%0ARequested%20Address:%0D%0A%0D%0AMobile%23%0D%0A%0D%0ABest%20Regards."
+                    class="email-card">
+                    <span class="email-icon">🏢</span>
+                    <span class="email-text">Delivery to Exceptional Address (Private CM only) </span>
+
+                </a>
+                <a href="mailto:BRANCH_SUPPORT@cibeg.com?subject=Branch%20Delivery%20Status%20Inquiry&body=Dears,%0D%0A%0D%0AWe%20kindly%20request%20your%20support%20with%20the%20card%20below,%20reached%20your%20branch%20or%20not%20as%20the%20customer%20request%20to%20deliver%20this%20card%20to%20your%20branch%0D%0A%0D%0APlease%20find%20the%20case%20details%20below%20for%20your%20review:%0D%0A%0D%0ACustomer%20Name:%0D%0AMobile:%0D%0APolicy%20%23%20%20%0D%0AAccount%20:%0D%0AMasked:%0D%0AMobile:%0D%0A%0D%0ARegards."
+                    class="email-card">
+                    <span class="email-icon">🏦</span>
+                    <span class="email-text">Branch Delivery Status</span>
+                </a>
+
+                <a href="mailto:BRANCH_SUPPORT@cibeg.com?subject=Customer%20Contact%20Request&body=Dears,%0D%0A%0D%0AWe%20kindly%20request%20your%20support%20to%20contact%20the%20customer%20below,%20as%20they%20have%20requested%20assistance%20regarding:%20%20(CDs%20/%20TDs%20/%20Branch%20activity%20/%20Loans/%20Credit%20cards%20/%20Overdrafts%20(OD)%20/%20The%20transaction(s)%20listed%20below%20/%20bounced%20cheques%20/%20clearance%20)%0D%0A%0D%0APlease%20find%20the%20case%20details%20below%20for%20your%20review:%0D%0A%0D%0ACustomer%20Name:%0D%0ACustomer%20Number%20:%0D%0AAccount%20:%0D%0ACopy%20Of%20Transaction%20:%0D%0ACP:%0D%0A%0D%0AThank%20you%20for%20your%20support%20and%20cooperation.%0D%0A%0D%0ARegards,"
+                    class="email-card">
+                    <span class="email-icon">📞</span>
+                    <span class="email-text">Customer Contact Request</span>
+                </a>
+
+                <a href="mailto:WEALTH_MANAGER@cibeg.com?subject=Follow%20up%20request&body=Dears,%0D%0A%0D%0AWe%20kindly%20request%20your%20urgent%20support%20in%20contacting%20the%20customer%20below.%20The%20customer%20attempted%20to%20reach%20you%20several%20times%20but%20was%20unsuccessful.%20A%20prompt%20follow-up%20is%20required%20as%20per%20the%20customer%E2%80%99s%20request.%0D%0APlease%20find%20the%20case%20details%20below%20for%20your%20review:%0D%0A%0D%0ACustomer%20Name:%0D%0ACustomer%20Number%20:%0D%0AAccount%20:%0D%0ACopy%20Of%20Transaction%20:%0D%0ACP:%0D%0A%0D%0AThank%20you%20for%20your%20support%20and%20cooperation.%0D%0A%0D%0ARegards,"
+                    class="email-card">
+                    <span class="email-icon">⭐</span>
+                    <span class="email-text">Wealth/Private Follow-Up</span>
+                </a>
+
+                <a href="mailto:LEADS_TEAM@cibeg.com?subject=Follow%20up%20request%20(%20Leads%20)&body=Dears,%0D%0A%0D%0AWe%20kindly%20request%20your%20urgent%20support%20in%20contacting%20the%20customer%20below,%20as%20they%20have%20asked%20about%20a(%20loan,%20credit%20card,%20overdraft,%20or%20credit%20card%20limit%20increase%20).%0D%0A%0D%0APlease%20find%20the%20case%20details%20below%20for%20your%20review:%0D%0A%0D%0ACustomer%20Name:%0D%0ACustomer%20Number%20:%0D%0AAccount%20:%0D%0ACP:%0D%0A%0D%0AThank%20you%20for%20your%20support%20and%20cooperation.%0D%0A%0D%0ARegards,"
+                    class="email-card">
+                    <span class="email-icon">🏷️</span>
+                    <span class="email-text">Follow-up Request (Leads)</span>
+                </a>
+
+                <a href="mailto:SUPPORT_DEPT@cibeg.com?subject=Follow%20up%20request&body=Dears,%0D%0A%0D%0AWe%20kindly%20request%20your%20support%20in%20contacting%20the%20customer%20below,%20from%20your%20side%20regarding%20(%2A%2A%2A%2A%2A%2A%20)%20as%20per%20Customer%20request%0D%0A%0D%0APlease%20find%20the%20case%20details%20below%20for%20your%20review:%0D%0A%0D%0ACustomer%20Name:%0D%0ACustomer%20Number%20:%0D%0ACP:%0D%0A%0D%0AThank%20you%20for%20your%20support%20and%20cooperation.%0D%0A%0D%0ARegards,"
+                    class="email-card">
+                    <span class="email-icon">🔄</span>
+                    <span class="email-text">General Follow-up Request</span>
+                </a>
+
+                <a href="mailto:IB_SUPPORT@cibeg.com?subject=Disable%20For%20IB%20%26%20OTP%20(%20Lost%20Mobile%20)&body=Dears,%0D%0A%0D%0AKindly%20disable%20the%20customer%20below%20due%20to%20his%20mobile%20already%20being%20lost%0D%0A%0D%0APlease%20find%20the%20case%20details%20below%20for%20your%20review:%0D%0A%0D%0ACustomer%20Name:%0D%0ACustomer%20Number:%20%0D%0AUser%23%20%0D%0ACP%23%20%0D%0A%0D%0AThank%20you%20for%20your%20support%20and%20cooperation.%0D%0A%0D%0ARegards."
+                    class="email-card">
+                    <span class="email-icon">📱❌</span>
+                    <span class="email-text">Disable IB & OTP (Lost Mobile)</span>
+                </a>
+
+                <a href="mailto:ESCALATION_TEAM@cibeg.com?subject=Escalation%20case%20(%2A%2A%2A%2A%2A%2A%2A%2A%2A%20)%20%23&body=Dears,%0D%0A%0D%0AI%20am%20writing%20to%20escalate%20a%20customer%20complaint%20regarding%20(%2A%2A%2A%2A%2A%2A%2A%2A%20)%0D%0A%0D%0Aas%20the%20Customer%20(case%20in%20details%20)%0D%0A%0D%0Aand%20Customer%20mention%20he%20will%20escalate%20and%20write%20on%20social%20media%20.%0D%0A%0D%0APlease%20find%20the%20case%20details%20below%20for%20your%20review:%0D%0A%0D%0ACustomer%20Name:%0D%0ACustomer%20Number%20:%0D%0AComplaint%20SR%23%20%0D%0ACP:%20%0D%0A%0D%0AThank%20you%20for%20your%20support%20and%20cooperation.%0D%0A%0D%0ARegards,"
+                    class="email-card">
+                    <span class="email-icon">⚠️</span>
+                    <span class="email-text">Urgent Escalation Case</span>
+                </a>
+
+                <a href="mailto:CHAIRMAN_OFFICE@cibeg.com?subject=Chairman%20Escalation%20SR%23&body=Dear%20All,%0D%0A%0D%0AI%20appreciate%20your%20support.%0D%0A%0D%0AThe%20customer%20has%20raised%20a%20complaint%20regarding%20(%20Case%20details%20)%0D%0A%0D%0APlease%20find%20the%20case%20details%20below%20for%20your%20review:%0D%0A%0D%0ACustomer%20Name:%0D%0ACustomer%20Number%20:%0D%0AEscalation%20Call%20SR%23%0D%0AComplaint%20NO%23%20%0D%0ACP%23%20%0D%0A%0D%0A%0D%0AThank%20you%20for%20your%20support%20and%20cooperation.%0D%0A%0D%0ARegards,"
+                    class="email-card">
+                    <span class="email-icon">⚖️</span>
+                    <span class="email-text">Chairman Escalation Case</span>
+                </a>
+
+                <a href="mailto:CARDS_DEPT@cibeg.com?subject=Missing%20credit%20card%20Policy&body=Dears,%0D%0A%0D%0AKindly%20provide%20your%20assistance%20regarding%20the%20Supplementary%20Credit%20Card%20issued%20on%2007-04-2025,%20as%20no%20policy%20has%20been%20displayed.%20Your%20support%20in%20this%20matter%20is%20highly%20appreciated.%0D%0A%0D%0APlease%20find%20the%20case%20details%20below%20for%20your%20review:%0D%0A%0D%0ACustomer%20Name:%0D%0ACustomer%20Number%20:%0D%0AAcc%23%20%0D%0AMasked%20:%20%0D%0AMobile%20Phone%20:%20%0D%0A%0D%0AThank%20you%20for%20your%20support%20and%20cooperation.%0D%0A%0D%0ARegards,"
+                    class="email-card">
+                    <span class="email-icon">💳❓</span>
+                    <span class="email-text">Missing Credit Card Policy</span>
+                </a>
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Script PAGE -->
+    <div id="Script" class="page">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="hero glass" style="padding: 30px; text-align: center; margin-bottom: 30px;">
+                    <h1>Our Scripts</h1>
+                    <p>Important scripts for Quality and CC team</p>
+                </section>
+
+                <div class="cards-container">
+
+                    <!-- Script Card 1: FYI Complaint -->
+                    <div class="card">
+                        <div class="card-header" onclick="toggleCard('script_fyi')" aria-expanded="false">
+                            <span>FYI Complaint 🚩</span>
+                            <span class="toggle-icon">&#9660;</span>
+                        </div>
+                        <div class="card-content" id="script_fyi" style="direction: rtl; text-align: right;">
+                            <p style="font-weight: bold; margin-bottom: 10px;">العميل: من فضلك عاوز أسجل اعتراض بخصوص (رسوم الحساب / فوائد بطاقات الائتمان / مصاريف الحد الادني / موقع فرع معين... الخ)</p>
+                            <div class="content-box">
+                                <p>الموظف: اسمح لي أوضح بانه هيتم تسجيل اعتراض حضرتك و هيتم النظر فالاعتراض من قبل الإدارة المختصة ولكن ليس بالضرورة ان حضرتك تستقبل مكالمة من الإدارة بخصوصها لأنها تسجيل الاعتراض لإيصال صوت وراي حضرتك للإدارة وهيوصل لحضرتك
+                                    رسالة على الرقم المسجل في بالبنك برقم الاعتراض.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Script Card 2: Secrecy Complaint -->
+                    <div class="card">
+                        <div class="card-header" onclick="toggleCard('script_secrecy')" aria-expanded="false">
+                            <span>Secrecy Complaint 🔐</span>
+                            <span class="toggle-icon">&#9660;</span>
+                        </div>
+                        <div class="card-content" id="script_secrecy" style="direction: rtl; text-align: right;">
+                            <p style="font-weight: bold; margin-bottom: 10px;">العميل: من فضلك عاوز أسجل شكوى عشان في حد عارف معلومات عن حسابي / تأخير بيانات حسابي</p>
+                            <div class="content-box">
+                                <p>الموظف: تحت امرك يا فندم اسمح لي في البداية أوضح لحضرتك انه البنك يتعامل مع النوع ده من الشكوى بجدية تامة حرصا علي سرية بيانات حضرتك..... تم تقديم الشكوى مع العلم بان مدة الشكوى () أيام عمل وهيوصل لحضرتك رسالة على الرقم
+                                    المسجل في البنك برقم الشكوى و حضرتك هتستقبل رد من الإدارة المختصة بخصوص شكوه حضرتك.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Script Card 3: CRU -->
+                    <div class="card">
+                        <div class="card-header" onclick="toggleCard('script_cru')" aria-expanded="false">
+                            <span>CRU (Escalation) 📞</span>
+                            <span class="toggle-icon">&#9660;</span>
+                        </div>
+                        <div class="card-content" id="script_cru" style="direction: rtl; text-align: right;">
+                            <p style="font-weight: bold; margin-bottom: 10px;">العميل: من فضلك انا اريد التحول لمديرك / اريد أكلم المدير</p>
+                            <div class="content-box">
+                                <p>الموظف: تمام يا فندم انا من خلالي بقدم طلب لحضرتك والمدير سيتواصل مع حضرتك.</p>
+                                <ul style="list-style-type: disc; padding-right: 20px; margin-top: 10px;">
+                                    <li><strong>Prime & Plus:</strong> على مدار اليوم إذا كان الطلب قبل الساعة 4 مساءً</li>
+                                    <li><strong>Wealth & Private:</strong> خلال ساعتين</li>
+                                </ul>
+                                <hr style="border-color: rgba(255,255,255,0.1); margin: 15px 0;">
+                                <p style="font-weight: bold; color: #ec2626;">إذا رفض العميل الانتظار:</p>
+                                <p><strong>العميل:</strong> لا انا محتاج تحول للمدير حالاً ومش هنتظر.</p>
+                                <p><strong>الموظف:</strong> انا متفهم ان حضرتك محتاج تكلم المدير حالا ولكن هو بالفعل معاه مكالمة فلو حضرتك مش حابب انتظر ممکن حضرتك تنهي المكالمة والمدير بمجرد انتهاء المكالمة اللي معاه هيتواصل مع حضرتك مباشرة.</p>
+                                <hr style="border-color: rgba(255,255,255,0.1); margin: 15px 0;">
+                                <p style="font-weight: bold; color:#ec2626;">إذا أصر العميل على الانتظار:</p>
+                                <p><strong>العميل:</strong> لا انا هفضل معاك على الانتظار لحد ما تحولني للمدير.</p>
+                                <p><strong>الموظف:</strong> تمام يا فندم ولكن اسمحلي اوضح لحضرتك ان فترة الانتظار ممكن تكون أكثر من دقيقتين وده بسبب ان المدير بيكون معاه مكالمة مع عميل اخر ثم الانتهاء منها بقدر احول مكالمة حضرتك لي.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Script Card 4: EPP Enrollment -->
+                    <div class="card">
+                        <div class="card-header" onclick="toggleCard('script_epp')" aria-expanded="false">
+                            <span>EPP Enrollment 💵</span>
+                            <span class="toggle-icon">&#9660;</span>
+                        </div>
+                        <div class="card-content" id="script_epp" style="direction: rtl; text-align: right;">
+                            <div class="content-box">
+                                <p>بالنسبة للمعاملة دي قيمة القسط الشهري بتكون "..." وده بفايدة شهريه متناقصة قيمتها "..." واجمالي قيمة الفائدة علي المعاملة بتكون "...".</p>
+                                <p>محتاج اوضح لحضرتك نتيجة انتهاء يوم العمل الحالي فان معامله التقسيط هيتم تنفيذها فعليا علي السيستم خلال يوم العمل التالي وبالتالي هيتم تحميل الكارت بالفوائد المستحقة علي المديونية تضاف في حالة طلب التقسيط في نهاية يوم العمل
+                                    6:45 مساءا.</p>
+                                <p>محتاج اوضح لحضرتك ان في حالة الإلغاء هيتم تحميل الكارت رسوم الإلغاء 5%.</p>
+                                <hr style="border-color: rgba(255,255,255,0.1); margin: 15px 0;">
+                                <p><strong>الخاتمة:</strong> تمام بأكد على حضرتك إنه بيتم تفعيل نظام التقسيط على المعاملة و هيتم ارسال رساله نصية لحضرتك مع العلم ان حضرتك من خلال خدمة الانترنت البنكية او تطبيق الموبايل تقدر تراجع العمليات المقسطة و هيتم
+                                    ارسال رساله نصيه فيها كافة التفاصيل.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Script Card 5: Cash On Phone -->
+                    <div class="card">
+                        <div class="card-header" onclick="toggleCard('script_cop')" aria-expanded="false">
+                            <span>Cash On Phone 💰</span>
+                            <span class="toggle-icon">&#9660;</span>
+                        </div>
+                        <div class="card-content" id="script_cop" style="direction: rtl; text-align: right;">
+                            <div class="content-box">
+                                <p>انا حابب اوضح لحضرتك الخدمة اللي البنك وفرها على الكارت الائتماني دلوقتى نقدر نحول لحضرتك مبلغ من كارت الائتمان من اول 500 جنيه لغاية الحد المتاح في الكارت لحسابك الشخصي في البنك وبنقسطه لحضرتك على المدة اللي بتختارها من
+                                    3 شهور ل 60 شهر بفايدة مميزة بتبقي افضل من فايدة الكارت الطبيعية على حسب عدد الشهور اللي بتحددها.</p>
+                                <p>وده بيتم بسهوله من خلال مكالمتي مع حضرتك وبعد يومين عمل حضرتك تقدر تسحبه من الحساب بدون عمولة سحب مكنة ولا فايدة من اول يوم سحب بعكس السحب النقدي مباشرة من الكارت الائتماني لو حضرتك حابب تستفيد بالخدمة دي حضرتك تبلغني محتاج
+                                    مبلغ قد إيه و تحب القسيط يبقى على كام شهر.</p>
+                                <hr style="border-color: rgba(255,255,255,0.1); margin: 15px 0;">
+                                <p><strong>تفاصيل العملية:</strong></p>
+                                <ul style="list-style-type: disc; padding-right: 20px;">
+                                    <li>هيتم تحويل مبلغ ... من الكارت الائتماني (نوع الكارت اللي أخر أربع ارقام فيه ...) على الحساب الشخصي اللي اخر اربع ارقام فيه .... اللي مربوط عليه الكارت / الفرع ...</li>
+                                    <li>المبلغ هيتم تقسيطه على مدة ... بفايدة متناقصة ... قيمة القسط الشهري .... وأجمالي الفائدة في مدة التقسيط ...</li>
+                                    <li>في حالات بتعرض القسط للإلغاء زي التأخير في السداد لمدة شهرين متتالين.</li>
+                                    <li>في حالة ان حضرتك حبيت تلغى الأقساط بتشرفنا بمكالمة للكول سنتر في حالة الإلغاء بينزل على حضرتك رسوم ألغاء 5% من أصل المبلغ الأساسي المتبقي على حضرتك والمبلغ المتبقي بيرجع مديونية على الكارت بتسدده بطريقة السداد العادية
+                                        للكارت كل قسط حضرتك بتسدده بيترد رصيد للكارت وتستخدمه عادي جدا.</li>
+                                    <li>التحويل بياخد يومين عمل و هيوصل لحضرتك رسالة بتفاصيل المعاملة اللي تم تقسيطها وميعاد اول قسط.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Script Card 6: Credit Shield -->
+                    <div class="card">
+                        <div class="card-header" onclick="toggleCard('script_shield')" aria-expanded="false">
+                            <span>Credit Shield 🛡️</span>
+                            <span class="toggle-icon">&#9660;</span>
+                        </div>
+
+                        <div class="card-content" id="script_shield" style="direction: rtl; text-align: right;">
+
+                            <p>
+                                كنت حابب أوضح لحضرتك عشان كارتك مؤهل للحصول على برنامج الحماية التأمينية، ودي تعتبر خدمة بديلة للتأمين الإجباري على الكارت، وفي جميع الحالات النظام ده بيكون مفيد أكثر لأنه بيزود المزايا التأمينية لحضرتك.
+                            </p>
+
+                            <div class="content-box">
+
+                                <ul style="list-style-type: disc; padding-right: 20px; margin-top: 10px;">
+
+                                    <li>
+                                        النظام الجديد يعفيك من دفع مبلغ التأمين الإجباري (25 جنيه)، ويستبدله برسوم خدمة بنسبة 0.9% (تسعة من عشرة في المائة) من إجمالي مديونية البطاقة في يوم تقفيل كشف الحساب، بحد أدنى 15 جنيه وبحد أقصى 1000 جنيه. ويتم خصم المصاريف الخاصة بالحماية التأمينية يوم
+                                        1 من كل شهر على أساس مبلغ تقفيل كشف الحساب السابق.
+                                    </li>
+
+                                    <li>
+                                        برنامج الحماية التأمينية يغطي مديونية البطاقة في حالة الوفاة أو العجز الكلي لا قدر الله.
+                                    </li>
+
+                                    <li>
+                                        في حالة الوفاة فقط: يتم دفع مبلغ مساوٍ لمديونية البطاقة الائتمانية للورثة، مع سداد مديونية البطاقة، بحد أقصى 2 مليون جنيه للتغطيتين معًا.
+                                    </li>
+
+                                    <li>
+                                        في حالة العجز الكلي: يتم دفع مبلغ بحد أقصى مليون جنيه.
+                                    </li>
+
+                                    <li>
+                                        في حالة سرقة الكارت بالإضافة إلى استخدامه يتم التغطية حتى 50 ألف جنيه، بشرط إبلاغ البنك فورًا وعمل محضر شرطة خلال 24 ساعة.
+                                    </li>
+
+                                    <li>
+                                        في حالة سرقة الهاتف المحمول أو اللاب توب مع الكارت يتم التغطية حتى 50 ألف جنيه إذا تمت سرقة الكارت مع الأجهزة، بشرط إبلاغ البنك وعمل محضر شرطة خلال 24 ساعة.
+                                    </li>
+
+                                    <li>
+                                        في حالة الإصابة بأحد الأمراض الحرجة مثل أمراض الكلى والسكتة الدماغية يتم التغطية حتى 25,000 جنيه.
+                                    </li>
+
+                                    <li>
+                                        يتم دفع رسوم خدمة بنسبة 0.9% من إجمالي مديونية البطاقة في يوم تقفيل كشف الحساب، بحد أدنى 15 جنيه وبحد أقصى 1000 جنيه.
+                                    </li>
+
+                                    <li>
+                                        مثال: لو إجمالي المديونية على الكارت يوم تقفيل كشف الحساب 1670 جنيه هتدفع 15 جنيه، ولو 2000 جنيه هتدفع 18 جنيه وهكذا، يعني كل 1000 جنيه زيادة في المديونية = 9 جنيه.
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Request Page -->
+    <div id="Request" class="page">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="glass" style="padding: 20px 40px;">
+                    <h1 style="color: white; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); text-align: center; margin-bottom: 30px;">Select a Service Request</h1>
+
+                    <!-- NEW: Search Bar for Request Page -->
+                    <div class="search-container">
+                        <input type="text" id="req_search_input" placeholder="Search by Sub Area directly...">
+                        <div id="req_search_results_container"></div>
+                    </div>
+
+                    <div class="dropdown-container">
+                        <!-- ... (نفس القوائم المنسدلة الحالية) ... -->
+                        <div>
+                            <label for="type" style="color: rgba(255,255,255,0.9); margin-bottom: 8px; display: block;">Service Type</label>
+                            <select id="type" class="dropdown" style="width: 100%;">
+                                <option value="">Select Type</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="area" style="color: rgba(255,255,255,0.9); margin-bottom: 8px; display: block;">Service Area</label>
+                            <select id="area" class="dropdown" style="width: 100%;">
+                                <option value="">Select Area</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="subArea" style="color: rgba(255,255,255,0.9); margin-bottom: 8px; display: block;">Sub Area</label>
+                            <select id="subArea" class="dropdown" style="width: 100%;">
+                                <option value="">Select Sub Area</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="resultCard" class="result-card" style="display: none;">
+                        <h2 class="card-title">Requirements</h2>
+                        <p id="requirements" style="color: rgba(255,255,255,0.9);"></p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LIBRARIES -->
+    <!-- Include jQuery & Select2 JS -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <!-- Load the Typed.js library -->
+    <script src="js/typed.umd.js"></script>
+    <!-- // --- DATA FOR REQUEST PAGE DROPDOWNS --- -->
+    <script src="js/Request.js"></script>
+    <!-- Data for social media page Script -->
+    <script src="js/SM.js"></script>
+    <!-- Data for Complait page Script -->
+    <script src="js/Complaint.js"></script>
+    <!-- MAIN SCRIPT -->
+    <script src="js/index.js"></script>
+    <!-- Login page Script -->
+    <script src="js/Logon.js"></script>
+
+</body>
+
+</html>
