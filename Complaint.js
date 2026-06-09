@@ -3056,67 +3056,67 @@ const complaintData = {
             "Customer Inquiry": { "Reason": "Not related for call center", "Requirements": "Not related for call center", "Template": "Not related for call center", "Ticket": "No", "Related_CC_&_Not": "No" }
         }
     },
-    "Fraud Investigation": {
-        "Cards": {
-            "Card Not Present": {
-                "Reason": `Customer complaining from ecommerce Transactions (online payments).`,
-                "Requirements": `• Account #/Credit Card Acc #:<br>• Masked Card#:<br>• Transaction date & time:<br>• Transaction amount:`,
-                "Template": `Customer complaining from ecommerce Transactions (online payments)`,
-                "Ticket": `No`,
-                "Related_CC_&_Not": `Yes`
-            },
-            "OTP SMS without transactions": {
-                "Reason": `Customer complaining from receiving OTP SMS without attempting to make payment.`,
-                "Requirements": `• Account #/Credit Card Acc #:<br>• Masked Card#:<br>• Date & Time of SMS:`,
-                "Template": `Customer complaining from receiving OTP SMS without attempting to make payment`,
-                "Ticket": `No`,
-                "Related_CC_&_Not": `Yes`
-            },
-            "Physical Card Lost/Stolen Abroad": {
-                "Reason": `Customer has his card lost or stolen outside Egypt ONLY.`,
-                "Requirements": `• Masked Card#:<br>• Date & Time of loss:<br>• Country:`,
-                "Template": `Customer has his card lost or stolen outside Egypt ONLY`,
-                "Ticket": `No`,
-                "Related_CC_&_Not": `Yes`
-            },
-            "Scam-Related Authorized Trans.": {
-                "Reason": `Customer complaining from approved transactions (Scam/Phishing).`,
-                "Requirements": `• Masked Card#:<br>• Date & Time:<br>• Amount:<br>• Type of Scam (Vishing/Phishing link):`,
-                "Template": `Customer complaining from scam-related approved transactions`,
-                "Ticket": `No`,
-                "Related_CC_&_Not": `Yes`
-            },
-            "Unauthorized Apple Pay Trans.": {
-                "Reason": `Customer complaining from unauthorized transactions done using apple pay wallet.`,
-                "Requirements": `• Masked Card#:<br>• Transaction date & time:<br>• Amount:`,
-                "Template": `Customer complaining from unauthorized transactions done using apple pay wallet`,
-                "Ticket": `No`,
-                "Related_CC_&_Not": `Yes`
-            },
-            "Unsuccessful Fraud Attempt": {
-                "Reason": `Customer complaining from transactions or verification trials that declined.`,
-                "Requirements": `• Masked Card#:<br>• Date & Time:<br>• Merchant Name:`,
-                "Template": `Customer complaining from declined fraudulent attempts`,
-                "Ticket": `No`,
-                "Related_CC_&_Not": `Yes`
-            }
-        },
-        "Digital Banking": {
-            "Unauthorized IB Transfers": {
-                "Reason": `Phishing leads to unauthorized IB fund transfers.`,
-                "Requirements": `• Account #:<br>• Date & Time:<br>• Amount:<br>• Beneficiary Details:`,
-                "Template": `Customer complaining from unauthorized fund transfers via Internet Banking`,
-                "Ticket": `No`,
-                "Related_CC_&_Not": `Yes`
-            },
-            "Unauthorized IPN Transfers": {
-                "Reason": `Customer complaining about money transfers through Instapay.`,
-                "Requirements": `• Account #:<br>• Date & Time:<br>• Amount:<br>• IPN Ref No:`,
-                "Template": `Customer complaining about unauthorized transfers through Instapay`,
-                "Ticket": `No`,
-                "Related_CC_&_Not": `Yes`
-            }
-        }
+"Fraud Investigation": {
+  "Cards": {
+    "Card Not Present": {
+      "Reason": "Customer complaining from ecommerce Transactions (online payments).",
+      "Requirements": "• Account #/Credit Card Acc #:<br>• Masked Card#:<br>• Transaction date:<br>• Transaction time:<br>• Transaction amount:<br>• Copy of transaction:<br>• Calling Party:",
+      "Template": "Customer complaining from ecommerce Transactions (online payments)",
+      "Ticket": "No",
+      "Related_CC_&_Not": "Yes"
+    },
+    "OTP SMS without transactions": {
+      "Reason": "Customer complaining from receiving OTP SMS without attempting to make payment.",
+      "Requirements": "• Account #/Credit Card Acc #:<br>• Masked Card#:<br>• Transaction date:<br>• Transaction time:<br>• Transaction amount:<br>• Copy of transaction:<br>• Calling Party:",
+      "Template": "Customer complaining from receiving OTP SMS without attempting to make payment",
+      "Ticket": "No",
+      "Related_CC_&_Not": "Yes"
+    },
+    "Physical Card Lost/Stolen Abroad": {
+      "Reason": "Customer has his card lost or stolen outside Egypt ONLY.",
+      "Requirements": "• Account #/Credit Card Acc #:<br>• Masked Card#:<br>• Transaction date:<br>• Transaction time:<br>• Transaction amount:<br>• Copy of transaction:<br>• Calling Party:",
+      "Template": "Customer has his card lost or stolen outside Egypt ONLY",
+      "Ticket": "No",
+      "Related_CC_&_Not": "Yes"
+    },
+    "Scam-Related Authorized Trans.": {
+      "Reason": "Customer complaining from approved transactions (Scam/Phishing).",
+      "Requirements": "• Account #/Credit Card Acc #:<br>• Masked Card#:<br>• Transaction date:<br>• Transaction time:<br>• Transaction amount:<br>• Copy of transaction:<br>• Calling Party:",
+      "Template": "Customer complaining from scam-related approved transactions",
+      "Ticket": "No",
+      "Related_CC_&_Not": "Yes"
+    },
+    "Unauthorized Apple Pay Trans.": {
+      "Reason": "Customer complaining from unauthorized transactions done using apple pay wallet.",
+      "Requirements": "• Account #/Credit Card Acc #:<br>• Masked Card#:<br>• Transaction date:<br>• Transaction time:<br>• Transaction amount:<br>• Copy of transaction:<br>• Calling Party:",
+      "Template": "Customer complaining from unauthorized transactions done using apple pay wallet",
+      "Ticket": "No",
+      "Related_CC_&_Not": "Yes"
+    },
+    "Unsuccessful Fraud Attempt": {
+      "Reason": "Customer complaining from transactions or verification trials that declined.",
+      "Requirements": "• Account #/Credit Card Acc #:<br>• Masked Card#:<br>• Transaction date:<br>• Transaction time:<br>• Transaction amount:<br>• Copy of transaction:<br>• Calling Party:",
+      "Template": "Customer complaining from declined fraudulent attempts",
+      "Ticket": "No",
+      "Related_CC_&_Not": "Yes"
+    }
+  },
+  "Digital Banking": {
+    "Unauthorized IB Transfers": {
+      "Reason": "Phishing leads to unauthorized IB fund transfers.",
+      "Requirements": "• Account #/Credit Card Acc #:<br>• Masked Card#:<br>• Transaction date:<br>• Transaction time:<br>• Transaction amount:<br>• Copy of transaction:<br>• Calling Party:",
+      "Template": "Customer complaining from unauthorized fund transfers via Internet Banking",
+      "Ticket": "No",
+      "Related_CC_&_Not": "Yes"
+    },
+    "Unauthorized IPN Transfers": {
+      "Reason": "Customer complaining about money transfers through Instapay.",
+      "Requirements": "• Account #/Credit Card Acc #:<br>• Masked Card#:<br>• Transaction date:<br>• Transaction time:<br>• Transaction amount:<br>• Copy of transaction:<br>• Calling Party:",
+      "Template": "Customer complaining about unauthorized transfers through Instapay",
+      "Ticket": "No",
+      "Related_CC_&_Not": "Yes"
+    }
+  }
     },
     "Funds": {
         "Offshore Investment": {
